@@ -1,12 +1,14 @@
 import qrcode
 from PIL import Image
 
+#invitation information
 date = input("Enter event date: ")
 guest = input("Enter guest name:  ")
 address = input("Enter event address: ")
 event = input("Enter event name: ")
 host = input("Enter host name: ")
 
+#symbol on invitation qr code
 qr_logo = 'appicon.png'
 
 logo = Image.open(qr_logo)
@@ -21,7 +23,7 @@ QRcode = qrcode.QRCode(
     error_correction = qrcode.constants.ERROR_CORRECT_H
 )
 
-
+#qr code data from invitation information
 text1 = "Invitation to " + host + "'s " + event + " on " + date + " come to " + address + " provide this at the gate."
 
 #get text1 variable to qrcode
